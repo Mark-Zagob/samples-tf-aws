@@ -23,3 +23,14 @@ provider "aws" {
     region = var.aws_region
     #profile = var.aws_profile
 }
+
+
+terraform {
+  backend "s3" {
+    bucket         = "tf-backend-ci-cd"
+    key            = "ci-cd/qa/terraform.tfstate"
+    region         = "ap-southeast-2"
+    encrypt        = true
+    dynamodb_table = "tf-backend-ci-cd" # Optional: For state locking
+  }
+}
