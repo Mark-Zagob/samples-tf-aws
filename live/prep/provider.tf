@@ -26,11 +26,12 @@ provider "aws" {
 
 
 terraform {
-  backend "s3" {
-    bucket         = "tf-backend-ci-cd"
-    key            = "ci-cd/prep/terraform.tfstate"
-    region         = "ap-southeast-2"
-    encrypt        = true
-    dynamodb_table = "tf-backend-ci-cd" # Optional: For state locking
+  cloud {
+    organization = "Mark_Zagob"
+
+    workspaces {
+      name = "sample-tf-aws"
+    }
   }
+
 }
