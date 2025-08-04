@@ -1,6 +1,0 @@
-aws_profile = "default"
-aws_region = "ap-southeast-2"
-ami_id = "ami-06d2149e11dd4bec4"
-instance_type = "t2.micro"
-cidr_vpc = "192.168.0.0/16"
-vpc_name = "vpc-prep"
