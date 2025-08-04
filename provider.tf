@@ -13,5 +13,4 @@ data "aws_availability_zones" "available" {
 
 provider "aws" {
   region = "ap-southeast-2"
-  profile = "default"
 }
