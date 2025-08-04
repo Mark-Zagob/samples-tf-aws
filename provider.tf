@@ -14,3 +14,14 @@ data "aws_availability_zones" "available" {
 provider "aws" {
   region = "ap-southeast-2"
 }
+
+terraform {
+  cloud {
+    organization = "Mark_Zagob"
+
+    workspaces {
+      name = "restart-terraform-codes"
+    }
+  }
+
+}
